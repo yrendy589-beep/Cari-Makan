@@ -1,0 +1,13 @@
+{
+  "name": "cari-makan-root",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.4.2"
+  }
+}
