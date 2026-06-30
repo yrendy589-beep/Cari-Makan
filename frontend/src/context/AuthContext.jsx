@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext(null);
 const STORAGE_KEY = "carimakan_user";
-const API_URL = "http://localhost:4000";
+const API_URL = "";
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
