@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbf6ef;
+  background-image: radial-gradient(#dfd1bd 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  color: #241f1a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Perforated "ticket" edge used on FoodCard — the app's signature element */
+.ticket-edge {
+  background-image: radial-gradient(circle at 50% 50%, #fbf6ef 4px, transparent 4.5px);
+  background-size: 18px 9px;
+  background-repeat: repeat-x;
+  background-position: top;
+  height: 9px;
+}
+
+.stamp {
+  transform: rotate(-3deg);
+}
+
+.stamp:hover {
+  transform: rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+::selection {
+  background-color: #e8a53d;
+  color: #241f1a;
+}

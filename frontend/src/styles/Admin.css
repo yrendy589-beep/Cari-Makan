@@ -1,0 +1,525 @@
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.btn-add {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-add:hover {
+  background: #059669;
+}
+
+/* Form Styles */
+.form-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-submit,
+.btn-cancel {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-submit {
+  background: #10b981;
+  color: white;
+  flex: 1;
+}
+
+.btn-submit:hover {
+  background: #059669;
+}
+
+.btn-cancel {
+  background: #e5e7eb;
+  color: #333;
+  flex: 1;
+}
+
+.btn-cancel:hover {
+  background: #d1d5db;
+}
+
+/* Foods List */
+.foods-list {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.foods-list h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 20px;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-size: 16px;
+}
+
+.foods-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.foods-table thead {
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.foods-table th {
+  padding: 12px;
+  text-align: left;
+  color: #555;
+  font-weight: 600;
+}
+
+.foods-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #333;
+}
+
+.foods-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.desc-cell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-active {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-inactive {
+  background: #fee2e2;
+  color: #7f1d1d;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  width: 150px;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex: 1;
+}
+
+.btn-edit {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #2563eb;
+}
+
+.btn-delete {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 15px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .admin-header h1 {
+    font-size: 24px;
+  }
+
+  .admin-tabs {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .foods-table {
+    font-size: 12px;
+  }
+
+  .foods-table th,
+  .foods-table td {
+    padding: 8px;
+  }
+
+  .actions {
+    width: auto;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .foods-table thead th:nth-child(n + 3) {
+    display: none;
+  }
+
+  .foods-table tbody td:nth-child(n + 3) {
+    display: none;
+  }
+
+  .order-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .order-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .order-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .order-item .subtotal {
+    text-align: left;
+  }
+}
+
+/* Tabs Styles */
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+/* Animasi denyut untuk badge notifikasi pesanan baru */
+@keyframes pulse-badge {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(224, 80, 43, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 8px rgba(224, 80, 43, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(224, 80, 43, 0);
+  }
+}
+
+.tab-btn {
+  padding: 10px 16px;
+  border: 2px solid #ddd;
+  background: white;
+  color: #333;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.tab-btn:hover {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.tab-btn.active {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+/* Orders Styles */
+.orders-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.orders-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 20px;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-size: 16px;
+}
+
+.orders-list {
+  space-y: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.order-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.order-header h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.order-header .customer {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.order-header .date {
+  margin: 3px 0 0 0;
+  color: #999;
+  font-size: 12px;
+}
+
+.order-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.total {
+  text-align: right;
+}
+
+.total p {
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.total .amount {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.status-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  background: white;
+}
+
+.status-select.status-pending {
+  color: #d97706;
+  border-color: #fbbf24;
+}
+
+.status-select.status-completed {
+  color: #10b981;
+  border-color: #6ee7b7;
+}
+
+.status-select.status-cancelled {
+  color: #ef4444;
+  border-color: #f87171;
+}
+
+.order-items {
+  margin-bottom: 15px;
+}
+
+.order-items h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 15px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #666;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item .subtotal {
+  text-align: right;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-notes {
+  background: #fef3c7;
+  border-left: 4px solid #fbbf24;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.order-notes p {
+  margin: 0;
+  font-size: 14px;
+  color: #92400e;
+}
